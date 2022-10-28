@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Semantic-tag_practice</title>
+</head>
+<body>
+    <header>
+        <h1>용도 햇갈리는 시멘틱 태그 semantic tag</h1>
+        <nav>
+            <li>
+                <ul><a href="./semantictag-type.html">용도 햇갈리는 시멘틱 태그 semantic tag</a></ul>
+                <ul><a href="">랜더링 개념과 SSR vs CSR</a></ul>
+                <ul><a href="">SPA와 SPA라우팅</a></ul>
+                <ul><a href="">홈페이지와 랜딩페이지의 차이</a></ul>
+                <ul><a href="">DOM이란</a></ul>
+                <ul><a href="">Seo 기본 가이드</a></ul>
+            </li>
+        </nav>
+    </header>
+    <main>
+        <article>
+            <h2>article vs section</h2>
+            <section>
+                <li>
+                    <ul>
+                        - article: 블로그 포스트 하나, 신문 기사 하나에 해당한다 
+                    main contents 안에서 다른 컨텐즈들과 겹치지 않는 고유한 정보를 하나의 article이라고 본다 
+                    </ul>    
+                    <ul>
+                        - section: 서로 연관있는 컨텐츠들을 묶어주고 싶을 때 (div는 그냥 아무 의미도 없지만 section으로 묶은 컨텐츠들은 서로 연관있는 거라고 의미가 있다)
+                    section을 section으로 묶을 수도 있고, article안에서도 을 사용할 수 있고,
+                    서로 연관있는 컨텐츠를 묶는다면, 
+                    article안이나 main content안이나 어디에서든 사용할 수 있다
+                    </ul>
+                </li>
+            </section>
+        </article>
+        <article>
+            <h2>그 외 햇갈리는 태그들</h2>
+            <section>
+                <h3>i vs em</h3>
+                <p>일단 둘 다 텍스트가 이텔릭체로 표현된다</p>
+                <li>
+                    <ul>i
+                    그저 이탈릭체로 텍스트 변경, 아이콘 넣을 때 많이 사용 
+                    </ul>
+                    <ul>em
+                    이탈릭체로 텍스트 변경하고, 의미상으로 강조 (글씨가 두꺼워진다거나 하진 않고)
+                    스크린 리더로 읽는다면 i는 강조되지 않지만 em는 강조되어 읽어진다
+                    인용구등 강조하고 싶은 이텔릭체가 있다면 em 태그 사용하기
+                    </ul>
+                </li>
+            </section>
+            <section>
+                <h3>table vs css</h3>
+                <li>
+                    <ul>
+                        table:데이터를 엑셀 형식으로 표시하려는 의도 아니면 쓰지 말기
+                    </ul>
+                    <ul>
+                        css:위 상황아니라면 flex, grid 이용하기
+                    </ul>
+                </li>
+            </section>
+            <section>
+                <h3>b vs strong</h3>
+                <li>
+                    <p>일단 둘 다 텍스트가 볼드체로 바뀐다</p>
+                    <ul>b
+                        시각적으로만 텍스트가 볼드체로 바뀐다
+                    </ul>
+                    <ul>strong
+                        텍스트가 볼드체로 바뀌고 의미상으로도 강조한다
+                    </ul>
+                </li>
+            </section>
+            <section>
+                <h3>목록을 나타내주는 태그 ul vs ol vs dl</h3>
+                <li>
+                    <ul>ul 
+                        순서 없는 목록을 나타낼 때 li 태그를 감싼다 (앞에 - 가 붙음)
+                    </ul>
+                    <ul>
+                        ol
+                        순서 있는 목록을 나타낼 때 li 태그를 감싼다 (앞에 숫자가 붙음)
+                    </ul>
+                    <ul>
+                        dl
+                        description list 
+                        어떤 한 단어, 개념에 대해서 정의, 설명하는 것들의 목록을 만들어준다 
+                        dt태그(단어)와 dd태그(설명)를 감싼다
+                        예를 들어 
+                        <xmp>
+                        <dl>
+	                    <dt>html</dt>
+	                    <dd>웹 페이지의 골격, 문서를 만들 때 사용함</dd>
+	                    <dt>css</dt>
+	                    <dd>html로 작성한 웹 문서를 이쁘게 스타일링</dd>
+                        </dl>
+                        </xmp>
+                    </ul>
+                </li>
+            </section>
+            <section>
+                <h3>img태그 vs div쓰고 css에서 background-img</h3>
+                <li>
+                    <ul>
+                        img태그
+                        이미지가 하나의 중요한 요소로 자리잡고 있을 때 
+                    </ul>
+                    <ul>
+                        div쓰고 css에서 background-img
+                        <br>이미지가 문서의 내용과는 별개로 어떤 객체들의 배경화면으로 쓰이는 등 스타일링 목적으로 사용될 때
+                        <br>의미적으로 사용되는 이미지가 아니니까 img태그 보다는 css에서 background-img쓰는 것이 더 옳다
+                    </ul>
+                </li>
+            </section>
+        
+        </article>
+    </main>
+    <footer>
+        
+        <p>참고자료</p>
+        <li>
+            <ul>
+                <a href="https://soeunlee.medium.com/%EC%8B%9C%EB%A7%A8%ED%8B%B1%ED%95%98%EA%B2%8C-html%EC%9D%84-%EC%A7%A0%EB%8B%A4%EB%8A%94-%EA%B2%83-90612ffc988e">Soeun/Sona Lee님_시맨틱하게 HTML을 짠다는 것.</a>
+            </ul>
+            <ul><a href="">...</a></ul>
+        </li>
+    </footer>
+</body>
+</html>

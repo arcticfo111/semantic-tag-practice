@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Semantic-tag_practice</title>
+</head>
+<body>
+    <header>
+        <h1>semantic tag로 html구조 구성하기</h1>
+        <nav>
+            <li>
+                <ul><a href="./semantictag-type.html">용도 햇갈리는 시멘틱 태그 semantic tag</a></ul>
+                <ul><a href="">랜더링 개념과 SSR vs CSR</a></ul>
+                <ul><a href="">SPA와 SPA라우팅</a></ul>
+                <ul><a href="">홈페이지와 랜딩페이지의 차이</a></ul>
+                <ul><a href="">DOM이란</a></ul>
+                <ul><a href="">Seo 기본 가이드</a></ul>
+            </li>
+        </nav>
+    </header>
+    <main>
+        <article>
+            <h2>html 컨셉과 구조</h2>
+            <section>
+                <h3>메타 데이터</h3>
+                <li>
+                    <ul>
+                        <xmp><meta charset=“UTF-8”></xmp>
+                    이 페이지에서 쓰여지는 글자의 포멧은 UTF-8을 사용한다고 정의한다
+                    </ul>
+                    <ul>
+                        <xmp><meta name=“viewport” content=“width=device-width, initial-scale=1.0"></xmp>
+                뷰포트를 기기의 화면 크기 다 쓴다고 정의한다
+                    </ul>
+                    <ul>
+                        <xmp><title>Document</title></xmp>
+                        브라우저에서 검색할 때 나오는 타이틀이나 북마크 추가할 때 나오는 제목을 나타내는 태그이다. 
+                    </ul>
+                </li>
+                
+            </section>
+
+            <section>
+                <h3> body태그 구조</h3>
+                <li>
+                    <ul><xmp>- 관습적으로 맨 위에 작성하는 이<!DOCTYPE html>document는 html이다 라고 정의 하는 태그이다 </xmp></ul>
+                    <ul>- html 태그는 이 파일에서 최상위의 태그이고 그 자식 태그로 head와 body 태그가 있다 </ul>
+                    <ul>- head태그에는 사용자에게 보여지는 ui적 요소가 전혀 없고 브라우저에서 검색할 때 나오는 타이틀이나 북마크 추가할 때 나오는 제목이나 아이콘들을 같은 메타데이터를 정의한다 
+                        그리고 css파일등 웹사이트를 이루는 부가적인 요소 파일들을 연결하는 것도 head에 작성한다</ul>
+                    <ul>- body태그는 사용자에게 보여주는 ui적 요소들을 담는 최상위 컨테이너이다 
+                        https://developer.mozilla.org/ko/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure</ul>
+                    <ul>- document body안에도 어느정도 구조를 나눠서 작성해야한다
+                        <li>
+                            <ul>- header</ul>
+                            <ul>- navigation bar</ul>
+                            <ul>- main content:section과 article 등 으로 구성될 수 있다 </ul>
+                            <ul>- aside</ul>
+                            <ul>- footer</ul>
+                        </li>
+                        모든 웹사이트가 이 구조를 따라야하는 것은 아니지만 기본적으로 이렇게 구성한다 
+                    헤더 안에 nav가 있을 수도 있고 밖에 있을 수도 있다 aside가 main contents안에 있을 수도 있고 footer안에 있을 수도 있다 
+                    이렇게 구조를 만드는 태그
+                    <br>
+                    -> 무작정 div로 나누지 말고, 위의 4가지 태그를 이용해서 이 페이지의 가장 근본적인 구조를 잡자…
+                    </ul>
+                </li>
+            </section>
+        </article>
+        <article>
+            <h2>태그 두 가지로 구분하기</h2>
+            <section>
+                <h3>박스(=컨테이너가 될 태그)</h3>
+                <section>
+                    <h4> body태그의  구조를 만드는 태그</h4>
+                    <li>
+                        <ul>header</ul>
+                        <ul>footer</ul>
+                        <ul>nav</ul>
+                        <ul>aside</ul>
+                        <ul>main contents</ul>
+                    </li>
+                </section>
+                <section>
+                    <h4> main contents의 구조를 만드는 태그</h4>
+                    <li>
+                        <ul>aside</ul>
+                        <ul>section</ul>
+                        <ul>article: 사용가능한 아이템들을 묶어준 것이다 </ul>
+                        <ul>div</ul>
+                        <ul>span</ul>
+                        <ul>from</ul>
+                        <ul>...</ul>
+                    </li>
+                </section>
+            </section>
+            <section>
+                <h3> 박스안의 내용물 (=아이템)이 될 태그
+                    <li>
+                        <ul>a</ul>
+                        <ul>button</ul>
+                        <ul>label 과 input : input만 사용하기보다 레이블을 통해 사용자에게 어떤 정보를 원하는지 옆에 같이 써준다 </ul>
+                        <ul>img</ul>
+                        <ul>video</ul>
+                        <ul>audio</ul>
+                        <ul>map</ul>
+                        <ul>canvas</ul>
+                        <ul>table</ul>
+                        <ul>p</ul>
+                        <ul>…</ul>
+
+                    </li>
+                </h3>
+            </section>
+        </article>
+        <article>
+            <h2>semantic태그 (semantic markup)</h2>
+            <section>
+                <h3>semantic태그란</h3>
+                <p>
+                    semantic은 의미의, 의미론적인 이란 뜻이다.
+                    body태그의 구조를 만드는 header, footer, nav, aside, main contents가 있다.
+                    그 중 main content 의 구조를 만드는 section, article 그리고 form, table,img 등이 있다.
+                </p>
+                <p>
+                    시멘틱 태그를 이용하면  
+                    <br>글을 적고 구조를 만들고 그 속의 아이템을 만들 때 의미를 부여할 수 있다.
+                    <br>h1태그로 감싼 텍스트는 더 중요하고, header, nav, footer 태그로 감싼 부분은 이 페이지에서 헤더와 네비게이션, 그리고 푸터의 역할을 한다고 브라우저에게 명시해줄 수 있다. 
+                </p>
+            </section>
+            <section>
+                <h3>시멘틱 태그를 이용해서 코딩해야하는 이유</h3>
+                <li>
+                    <ul>
+                        반대로 div태그만을 이용한다면 브라우저는 이 웹사이트 페이지를 의미있게 이해할 수 없다.
+                        div 태그만 있는 웹페이지는 헤더도 없고 네비게이션도 푸터도 없는 그냥 무언가의 정보 덩어리로 이루어졌다고 브라우저는 생각할 거다…
+                    </ul>
+                    <ul>
+                        seo
+                        <br>사람들이 브라우저에서 내 웹사이트가 검책 최적화가 되어있어야 한다.
+                        <br>예를 들어 “제목과 부제목, 대표이미지는 이거구나”라고 브라우저가 이해해서 관련 키워드가 검색되었을 때 소개해줄 수 있다.
+                        <br>seo에 도움되는 시멘틱태그를 이용해야한다.
+                    </ul>
+                    <ul>
+                        accessibility
+                        <br>웹 접근성 때문이다 
+                        <br>음성으로 읽어주는 스크린리더 유저이거나 키보드만을 사용하는 경우, 적절한 시멘틱 태그를 사용해 코딩한 웹사이트라면 문제없이 잘 작동될 수 있다. 
+                    </ul>
+                    <ul>
+                        for us, maintainability 
+                        <br>개발자가 웹사이트 코드를 보았을 때 한눈에 이런식으로 구조가 구성 되어있고, 이런 의미가 있는 정보가 어디에 위치하고 있는지 등 알 수 있어야 한다
+                        <br>그래야 유지보수성도 높일 수 있다
+                    </ul>
+                </li>
+                
+            </section>
+        </article>
+    </main>
+    <footer>
+
+        <p>참고자료</p>
+        <li>
+            <ul>https://soeunlee.medium.com/%EC%8B%9C%EB%A7%A8%ED%8B%B1%ED%95%98%EA%B2%8C-html%EC%9D%84-%EC%A7%A0%EB%8B%A4%EB%8A%94-%EA%B2%83-90612ffc988e</ul>
+        </li>
+    </footer>
+</body>
+</html>

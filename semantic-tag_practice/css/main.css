@@ -1,0 +1,27 @@
+header{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(238, 238, 238, 0.508);
+}
+article{
+    
+    background-color: rgba(162, 170, 175, 0.443);
+    margin:1rem 0rem;
+    padding:1rem;
+}
+
+code {
+    background-color: #eee;
+    border-radius: 3px;
+    font-family: courier, monospace;
+    padding: 0 3px;
+}
+li {
+    list-style-type: none;
+}
+
+footer{
+    background-color: rgba(42, 42, 42, 0.326);
+    padding: 1rem;
+    
+}
